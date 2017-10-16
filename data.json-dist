@@ -1,5 +1,5 @@
 {
-  "name": "iMedidata",
+  "name": "Root",
   "children": [
     {
       "name": "Front",
@@ -107,7 +107,9 @@
             {
               "name": "Blogs",
               "url": "blogs.my-media-website.com/*",
-              "dependsOn": [],
+              "dependsOn": [
+                "Wordpress MU"
+              ],
               "technos": [
                 "PHP",
                 "Wordpress"
@@ -164,7 +166,9 @@
             {
               "name": "Jobs",
               "url": "jobs.my-media-website.com",
-              "dependsOn": [],
+              "dependsOn": [
+                "BO JobBoard"
+              ],
               "technos": [
                 "PHP",
                 "JobBoard"
@@ -178,7 +182,9 @@
             {
               "name": "Store",
               "url": "store.my-media-website.com",
-              "dependsOn": [],
+              "dependsOn": [
+                "BO Store"
+              ],
               "technos": [
                 "PHP",
                 "Zend",
@@ -244,7 +250,7 @@
           ]
         },
         {
-          "name": "CTMS",
+          "name": "Mobile",
           "children": [
             {
               "name": "iOS app",
@@ -308,7 +314,7 @@
       ]
     },
     {
-      "name": "Patient Cloud",
+      "name": "SaaS",
       "children": [
         {
           "name": "Xiti"
@@ -342,12 +348,14 @@
       ]
     },
     {
-      "name": "RaveX",
+      "name": "API",
       "children": [
         {
           "name": "Content API",
           "url": "api.my-media-website.com/content",
-          "dependsOn": [],
+          "dependsOn": [
+            "CMS"
+          ],
           "technos": [
             "PHP",
             "Silex",
@@ -389,7 +397,9 @@
         {
           "name": "Router API",
           "url": "api.my-media-website.com/router",
-          "dependsOn": [],
+          "dependsOn": [
+            "CMS"
+          ],
           "technos": [
             "PHP",
             "Silex",
@@ -421,7 +431,10 @@
         {
           "name": "Account API",
           "url": "api.my-media-website.com/account",
-          "dependsOn": [],
+          "dependsOn": [
+            "BO Account",
+            "CRM"
+          ],
           "technos": [
             "PHP",
             "Silex",
@@ -437,7 +450,9 @@
         {
           "name": "SEO API",
           "url": "api.my-media-website.com/seo",
-          "dependsOn": [],
+          "dependsOn": [
+            "BO SEO"
+          ],
           "technos": [
             "PHP",
             "Silex",
@@ -475,7 +490,9 @@
             }
           ],
           "url": "api.my-media-website.com/export",
-          "dependsOn": [],
+          "dependsOn": [
+            "CMS"
+          ],
           "satisfaction": 0.8,
           "technos": [
             "PHP",
@@ -486,6 +503,194 @@
             "Amazon": [
               "api-1",
               "api-2"
+            ]
+          }
+        }
+      ],
+      "dependsOn": [
+        "S3 Storage",
+        "Simple Queue Service"
+      ]
+    },
+    {
+      "name": "Back",
+      "children": [
+        {
+          "name": "CMS",
+          "children": [
+            {
+              "name": "BO World"
+            },
+            {
+              "name": "BO Sport"
+            },
+            {
+              "name": "BO Politics"
+            },
+            {
+              "name": "BO Science"
+            },
+            {
+              "name": "BO Business"
+            },
+            {
+              "name": "BO Technology"
+            },
+            {
+              "name": "BO Health"
+            },
+            {
+              "name": "BO Front page editor"
+            },
+            {
+              "name": "BO Section manager"
+            }
+          ],
+          "url": "cms.my-media-website.com",
+          "technos": [
+            "Javascript",
+            "NodeJS",
+            "Sails"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "CRM",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "SugarCRM"
+          ],
+          "satisfaction": 0.5,
+          "host": {
+            "OVH": [
+              "crm-1",
+              "crm-2"
+            ]
+          }
+        },
+        {
+          "name": "Wordpress MU",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Wordpress"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "BO Videos",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Symfony"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "BO Account",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Symfony"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "BO SEO",
+          "children": [
+            {
+              "name": "BO Meta home"
+            },
+            {
+              "name": "BO Meta content"
+            },
+            {
+              "name": "BO Meta links"
+            }
+          ],
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Symfony"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "Import",
+          "children": [
+            {
+              "name": "FTP Import"
+            },
+            {
+              "name": "RSS Import"
+            },
+            {
+              "name": "Custom Import"
+            }
+          ],
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Symfony"
+          ],
+          "host": {
+            "OVH": [
+              "bo-1",
+              "bo-2"
+            ]
+          }
+        },
+        {
+          "name": "BO JobBoard",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "JobBoard"
+          ],
+          "host": {
+            "OVH": [
+              "job-1",
+              "job-2"
+            ]
+          }
+        },
+        {
+          "name": "BO Store",
+          "url": "?",
+          "technos": [
+            "PHP",
+            "Zend",
+            "Magento"
+          ],
+          "host": {
+            "OVH": [
+              "store"
             ]
           }
         }
