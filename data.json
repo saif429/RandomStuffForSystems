@@ -1,8 +1,8 @@
 {
-  "name": "Root",
+  "name": "Trial",
   "children": [
     {
-      "name": "Trial Planning",
+      "name": "Planning",
       "children": [
         {
           "name": "Website",
@@ -134,7 +134,7 @@
       ]
     },
     {
-      "name": "Trial Close-Out",
+      "name": "Close-Out",
       "children": [
         { "name": "Xiti" },
         { "name": "Google Ads" },
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "name": "Trial Execution",
+      "name": "Execution",
       "children": [
         { 
           "name": "Content API",
@@ -224,7 +224,7 @@
       "dependsOn": ["S3 Storage", "Simple Queue Service"]
     },
     {
-      "name": "Trial Start-Up",
+      "name": "Start-Up",
       "children": [
         { 
           "name": "CMS",
