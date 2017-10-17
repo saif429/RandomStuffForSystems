@@ -134,7 +134,7 @@
       ]
     },
     {
-      "name": "SaaS",
+      "name": "Trial Close-Out",
       "children": [
         { "name": "Xiti" },
         { "name": "Google Ads" },
@@ -152,7 +152,7 @@
       ]
     },
     {
-      "name": "API",
+      "name": "Trial Execution",
       "children": [
         { 
           "name": "Content API",
@@ -224,7 +224,7 @@
       "dependsOn": ["S3 Storage", "Simple Queue Service"]
     },
     {
-      "name": "Back",
+      "name": "Trial Start-Up",
       "children": [
         { 
           "name": "CMS",
