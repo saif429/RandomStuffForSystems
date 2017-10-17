@@ -1,8 +1,8 @@
 {
-  "name": "iMedidata",
+  "name": "Trial Planning",
   "children": [
     {
-      "name": "Front",
+      "name": "iMedidata",
       "children": [
         {
           "name": "Website",
